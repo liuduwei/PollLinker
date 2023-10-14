@@ -18,7 +18,7 @@ const login = (code) =>
 
 // 获取登录者信息
 const queryUserInfo = (token, uid) =>
-  http.get(`/api/getUserInfo`, {
+  http.get("/api/getUserInfo", {
     params: {
       access_token: token,
       uid,

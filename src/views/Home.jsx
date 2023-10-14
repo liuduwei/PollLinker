@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api, { authUrl } from "../api/index";
-import { useSearchParams, useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import _ from "../assets/utils";
 
 const Home = function (props) {
@@ -14,14 +14,14 @@ const Home = function (props) {
   const handleClickButton = async (e) => {
     try {
       const { id, screen_name } = await api.queryUserInfo(
-        _.storage.get("tk").value,
-        _.storage.get("uid").value
+        _.storage.get("tk"),
+        _.storage.get("uid")
       );
       if (id === undefined && screen_name === undefined) {
         throw new Error("获取token失败");
       } else {
         setUserId(id);
-        setUserName(userName);
+        setUserName(screen_name);
       }
     } catch (_) {
       console.log(_);
@@ -70,8 +70,8 @@ const Home = function (props) {
         <>
           <p>登陆成功，uid：{_.storage.get("uid")}</p>
           <button onClick={handleClickButton}>点击查询账户信息</button>
-          <p>用户id{userId}</p>
-          <p>用户名name{userName}</p>
+          <p>用户id: {userId}</p>
+          <p>用户名name: {userName}</p>
         </>
       )}
     </div>
