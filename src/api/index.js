@@ -16,6 +16,11 @@ const login = (code) =>
     redirect_uri,
   });
 
+const logout = (token) =>
+  http.post("/api/logout", {
+    access_token: token,
+  });
+
 // 获取登录者信息
 const queryUserInfo = (token, uid) =>
   http.get("/api/getUserInfo", {
@@ -28,6 +33,7 @@ const queryUserInfo = (token, uid) =>
 /* 暴露API */
 const api = {
   login,
+  logout,
   queryUserInfo,
 };
 

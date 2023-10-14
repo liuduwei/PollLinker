@@ -90,8 +90,8 @@ const http = function http(config) {
         }
         return result;
       }
-      console.log(response);
-      console.log(response.json().then((res) => console.log(res)));
+      // console.log(response, 1);
+      // console.log(response.json().then((res) => console.log(res)));
       return Promise.reject({
         code: -100,
         status,
