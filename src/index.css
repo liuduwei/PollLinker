@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .container {
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+}

@@ -76,7 +76,7 @@ const Home = function (props) {
   }, []);
   return (
     <div className="Home">
-      <h1>问卷调查平台</h1>
+      <h1 className="text-3xl font-bold container">问卷调查平台</h1>
       {!isLogin ? (
         <>
           <p> 尚未登陆</p>
