@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import api, { authUrl } from "../api/index";
 import { useSearchParams } from "react-router-dom";
 import _ from "../assets/utils";
-
 const Home = function (props) {
   const [isLogin, setIsLogin] = useState(false);
   const [userId, setUserId] = useState("");
@@ -75,18 +74,24 @@ const Home = function (props) {
     // }
   }, []);
   return (
-    <div className="Home">
-      <h1 className="text-3xl font-bold container text-center">问卷调查平台</h1>
+    <div className="Home container">
+      <h1 className="text-3xl font-bold text-center">问卷调查平台</h1>
       {!isLogin ? (
         <>
           <p> 尚未登陆</p>
-          <a href={authUrl}>登陆(跳转到新浪weibo)</a>
+          <a className="link" href={authUrl}>
+            登陆(跳转到新浪weibo)
+          </a>
         </>
       ) : (
         <>
           <p>登陆成功，uid：{_.storage.get("uid")}</p>
-          <button onClick={handleClickButton}>点击查询账户信息</button>
-          <button onClick={handleClicklogout}>登出</button>
+          <button className="btn" onClick={handleClickButton}>
+            点击查询账户信息
+          </button>
+          <button className="btn" onClick={handleClicklogout}>
+            登出
+          </button>
           <p>用户id: {userId}</p>
           <p>用户名name: {userName}</p>
         </>

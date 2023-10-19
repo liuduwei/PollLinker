@@ -1,6 +1,5 @@
 import _ from "../assets/utils";
 import qs from "qs";
-import { Toast } from "antd-mobile";
 
 /* 核心方法 */
 const http = function http(config) {
@@ -99,7 +98,7 @@ const http = function http(config) {
       });
     })
     .catch((reason) => {
-      Toast.show({
+      console.log({
         icon: "fail",
         content: "网络繁忙,请稍后再试!",
       });
