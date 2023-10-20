@@ -5,8 +5,4 @@ import App from "./App";
 // import "./flexible.js"; use tailwind css
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<App />);

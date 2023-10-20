@@ -3,8 +3,8 @@ const NavBar = function ({ avatar1, isLogin }) {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <div class="avatar">
-          <div class="w-10 rounded">
+        <div className="avatar">
+          <div className="w-10 rounded">
             <img src={avatar} alt="avatar"></img>
           </div>
         </div>
@@ -18,19 +18,16 @@ const NavBar = function ({ avatar1, isLogin }) {
             <li>
               <details>
                 <summary>用户7099898</summary>
-                <ul className="p-2 bg-base-100">
+                <ul className="p-2 bg-base-100 mt-1">
                   <li>
                     <a>登出</a>
-                  </li>
-                  <li>
-                    <a>Link 2</a>
                   </li>
                 </ul>
               </details>
             </li>
           </ul>
         ) : (
-          <a class="btn btn-primary">登陆</a>
+          <a className="btn btn-primary">微博登陆</a>
         )}
       </div>
     </div>

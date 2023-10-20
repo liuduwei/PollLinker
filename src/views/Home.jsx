@@ -3,6 +3,7 @@ import api, { authUrl } from "../api/index";
 import { useSearchParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
+import Card from "../components/Card";
 import _ from "../assets/utils";
 const Home = function (props) {
   const [isLogin, setIsLogin] = useState(false);
@@ -77,7 +78,6 @@ const Home = function (props) {
   }, []);
   return (
     <>
-      <NavBar></NavBar>
       <div className="Home">
         {/* {!isLogin ? (
           <>
@@ -99,7 +99,15 @@ const Home = function (props) {
             <p>用户名name: {userName}</p>
           </>
         )} */}
-        <Hero></Hero>
+        <section className="mb-8">
+          <Hero isLogin={true}></Hero>
+        </section>
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4 justify-items-center px-4">
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+        </div>
       </div>
     </>
   );
