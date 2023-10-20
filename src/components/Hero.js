@@ -1,7 +1,12 @@
 import hero from "../assets/hero.jpg";
 import avatar from "../assets/zsu.PNG";
+import { useEffect } from "react";
 import { SiSinaweibo } from "react-icons/si";
+import _ from "../assets/utils";
 const Hero = function ({ isLogin }) {
+  useEffect(() => {
+    _.scrollSmooth();
+  }, []);
   return (
     <div
       className="hero h-screen relative"
@@ -16,7 +21,11 @@ const Hero = function ({ isLogin }) {
           <p className="mb-5">
             中文乱数，又称中文虚构文本、中文伪文本，是印刷和排版领域所使用的文本。它是一种在排版、打字和印刷中，为了让文字内容不受文本的影响而使用的虚构文字。中文乱数有字体、字号和排版的特性，能够以最接近真实文字的外观及书写结构呈现出来。中文乱数在不让读者分心的情况下，能够让文字及其字母之间的间距和字母之间的间距明显呈现出来。
           </p>
-          <button className="btn btn-primary btn-lg btn-wide">开始填写</button>
+          <a href="#card" id="scroll-smooth">
+            <button className="btn btn-primary btn-lg btn-wide">
+              开始填写
+            </button>
+          </a>
         </div>
         <div className="w-[calc(100vw-24px)] flex justify-between items-center absolute top-6">
           <div className="avatar ">
