@@ -5,6 +5,7 @@ const client_id = "3828707668";
 const grant_type = "authorization_code";
 /*redirect_uri convert by https://anspoon.com/url-conveter use convert value*/
 const redirect_uri_convert = "http%3A%2F%2Flocal.polllinker.com%2F%23%2Flogin";
+// const redirect_uri = "http://yousan.xyz";
 const redirect_uri = "http://local.polllinker.com/#/login";
 export const authUrl = `https://api.weibo.com/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri_convert}`;
 
