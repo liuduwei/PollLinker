@@ -20,13 +20,13 @@ const Footer = function (props) {
       <nav>
         <header className="footer-title">联系我们：</header>
         <div className="grid grid-flow-col gap-4">
-          <a>
+          <a className="cursor-pointer">
             <AiOutlineWechat size={24}></AiOutlineWechat>
           </a>
-          <a>
+          <a className="cursor-pointer">
             <AiFillPhone size={24}></AiFillPhone>
           </a>
-          <a>
+          <a className="cursor-pointer">
             <SiSinaweibo size={24}></SiSinaweibo>
           </a>
         </div>
