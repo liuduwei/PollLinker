@@ -3,10 +3,10 @@ import avatar from "../assets/zsu.PNG";
 import { useEffect } from "react";
 import { SiSinaweibo } from "react-icons/si";
 import _ from "../assets/utils";
-const Hero = function ({ isLogin }) {
+const Hero = function ({ isLogin, authUrl, handleLogout }) {
   useEffect(() => {
     _.scrollSmooth();
-  }, []);
+  }, [isLogin, authUrl]);
   return (
     <div
       className="hero h-screen relative"
@@ -21,11 +21,24 @@ const Hero = function ({ isLogin }) {
           <p className="mb-5">
             中文乱数，又称中文虚构文本、中文伪文本，是印刷和排版领域所使用的文本。它是一种在排版、打字和印刷中，为了让文字内容不受文本的影响而使用的虚构文字。中文乱数有字体、字号和排版的特性，能够以最接近真实文字的外观及书写结构呈现出来。中文乱数在不让读者分心的情况下，能够让文字及其字母之间的间距和字母之间的间距明显呈现出来。
           </p>
-          <a href="#card" id="scroll-smooth">
-            <button className="btn btn-primary btn-lg btn-wide">
-              开始填写
-            </button>
-          </a>
+          {isLogin ? (
+            <a href="#card" id="scroll-smooth">
+              <button className="btn btn-primary btn-lg btn-wide">
+                开始填写
+              </button>
+            </a>
+          ) : (
+            <>
+              <button
+                className="btn btn-primary btn-lg btn-wide"
+                onClick={() =>
+                  document.getElementById("my_modal_1").showModal()
+                }
+              >
+                开始填写
+              </button>
+            </>
+          )}
         </div>
         <div className="w-[calc(100vw-24px)] flex justify-between items-center absolute top-6">
           <div className="avatar ">
@@ -36,11 +49,13 @@ const Hero = function ({ isLogin }) {
           <div className="flex items-center gap-4">
             {isLogin ? (
               <>
-                <p>用户86787878</p>
-                <a className="btn btn-primary">登出</a>
+                <p>你好，微博用户</p>
+                <button className="btn btn-primary" onClick={handleLogout}>
+                  登出
+                </button>
               </>
             ) : (
-              <a className="btn btn-primary">
+              <a href={authUrl} className="btn btn-primary">
                 <SiSinaweibo size={"2rem"}></SiSinaweibo>
                 登陆
               </a>
