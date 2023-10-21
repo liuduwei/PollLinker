@@ -5,7 +5,7 @@ const Modal = function ({ authUrl }) {
         <h3 className="font-bold text-lg">需要登陆</h3>
         <p className="py-4">
           需要登陆您的
-          <span className="text-primary font-bold text-lg"> 微博账号 </span>ts
+          <span className="text-primary font-bold text-lg"> 微博账号 </span>
           以完成填写，点击下方
           <span className="text-primary font-bold text-lg"> 确认 </span>
           跳转到微博登陆
