@@ -89,8 +89,6 @@ const http = function http(config) {
         }
         return result;
       }
-      // console.log(response, 1);
-      // console.log(response.json().then((res) => console.log(res)));
       return Promise.reject({
         code: -100,
         status,
@@ -98,10 +96,6 @@ const http = function http(config) {
       });
     })
     .catch((reason) => {
-      console.log({
-        icon: "fail",
-        content: "网络繁忙,请稍后再试!",
-      });
       return Promise.reject(reason);
     });
 };

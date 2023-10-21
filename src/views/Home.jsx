@@ -53,6 +53,7 @@ const Home = function (props) {
   const navigate = useNavigate();
   const location = useLocation();
   const handleLogout = async () => {
+    toast.loading("登出中...");
     const tk = _.storage.get("tk", 86400);
     try {
       const { result } = await api.logout(tk);
@@ -80,6 +81,7 @@ const Home = function (props) {
     (async () => {
       try {
         if (usp.size === 0 && usp.get("code") === null) return;
+        toast.loading("登陆中...");
         const authCode = usp.get("code");
         const { uid, access_token } = await api.login(authCode);
         if (uid === undefined && access_token === undefined) {
@@ -94,13 +96,15 @@ const Home = function (props) {
           navigate("/Home");
         }
       } catch (_) {
-        toast.error(_);
+        toast.error("网络繁忙，稍后再试");
+        navigate("/Home");
         return;
       }
     })();
   }, [location]);
   return (
     <>
+      <Toaster richColors position="top-center"></Toaster>
       <div className="Home">
         <section className="mb-8">
           <Hero
@@ -127,7 +131,6 @@ const Home = function (props) {
         <Footer></Footer>
       </div>
       {isLogin ? null : <Modal authUrl={authUrl}></Modal>}
-      <Toaster richColors position="top-center"></Toaster>
     </>
   );
 };
