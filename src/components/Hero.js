@@ -17,9 +17,19 @@ const Hero = function ({ isLogin, authUrl, handleLogout }) {
       <div className="hero-overlay bg-opacity-50"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">欢迎来到中山大学问卷平台</h1>
-          <p className="mb-5">
-            中文乱数，又称中文虚构文本、中文伪文本，是印刷和排版领域所使用的文本。它是一种在排版、打字和印刷中，为了让文字内容不受文本的影响而使用的虚构文字。中文乱数有字体、字号和排版的特性，能够以最接近真实文字的外观及书写结构呈现出来。中文乱数在不让读者分心的情况下，能够让文字及其字母之间的间距和字母之间的间距明显呈现出来。
+          <h1 className="mb-5 text-5xl font-bold">
+            我们诚邀您参加新浪微博用户调查
+          </h1>
+          <p className="mb-5" style={{ textAlign: "start" }}>
+            <span style={{ marginBottom: "16px", display: "block" }}>
+              &#x2022;本调查由中山大学医学统计系课题团队发起，旨在通过社交媒体资料洞察用户情绪波动和心理状态，希望您支持我们的研究！
+            </span>
+            <span style={{ marginBottom: "16px", display: "block" }}>
+              &#x2022;本调查将会收集您最近一年内公开发布的微博，团队向您承诺，收集到的所有信息都会严格保密。
+            </span>
+            <span style={{ marginBottom: "16px", display: "block" }}>
+              &#x2022;参与调查，您可以深入了解最近自己的情绪状态，我们还会未满足数据要求的参与者发放，感谢金，谢谢您的支持！
+            </span>
           </p>
           {isLogin ? (
             <a href="#card" id="scroll-smooth">

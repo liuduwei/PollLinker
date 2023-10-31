@@ -8,7 +8,7 @@ const Card = function ({ isLogin, userId, title, description, url }) {
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title">{title}</h2>
-        <p>{description}</p>
+        <p dangerouslySetInnerHTML={{ __html: description }}></p>
         <div className="mt-4 card-actions">
           {isLogin ? (
             <a href={`${url}${userId}`}>

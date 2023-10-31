@@ -10,39 +10,15 @@ import Modal from "../components/Modal";
 const Home = function (props) {
   const pollData = [
     {
-      title: "社会满意度调查",
+      title: "心理健康调查",
       description:
-        "当今社会越来越好了，这项调查是针对社区居民的社会满意度调查来写的",
-      url: "https://www.wjx.cn/vm/YHy33D2.aspx?sojumpparm=",
+        "采用权威有效的情绪水平和心理状态测评工具，可帮助您深入了解自己最近的情绪波动。",
+      url: "https://www.wjx.cn/vm/OFmwYD1.aspx?sojumpparm=",
     },
     {
       title: "社会满意度调查",
       description:
-        "当今社会越来越好了，这项调查是针对社区居民的社会满意度调查来写的",
-      url: "https://www.wjx.cn/vm/YHy33D2.aspx?sojumpparm=",
-    },
-    {
-      title: "社会满意度调查",
-      description:
-        "当今社会越来越好了，这项调查是针对社区居民的社会满意度调查来写的",
-      url: "https://www.wjx.cn/vm/YHy33D2.aspx?sojumpparm=",
-    },
-    {
-      title: "社会满意度调查",
-      description:
-        "当今社会越来越好了，这项调查是针对社区居民的社会满意度调查来写的",
-      url: "https://www.wjx.cn/vm/YHy33D2.aspx?sojumpparm=",
-    },
-    {
-      title: "社会满意度调查",
-      description:
-        "当今社会越来越好了，这项调查是针对社区居民的社会满意度调查来写的",
-      url: "https://www.wjx.cn/vm/YHy33D2.aspx?sojumpparm=",
-    },
-    {
-      title: "社会满意度调查",
-      description:
-        "当今社会越来越好了，这项调查是针对社区居民的社会满意度调查来写的",
+        "采用权威有效的BFI-44量表，可帮助您深入了解自己的人格特质。 <br/> 请您先完成新浪微博用户心理健康调查再参与本调查，谢谢!",
       url: "https://www.wjx.cn/vm/YHy33D2.aspx?sojumpparm=",
     },
   ];
@@ -75,7 +51,7 @@ const Home = function (props) {
     ) {
       setIsLogin(true);
       setUserId(_.storage.get("uid", 86400));
-      toast.success(`欢迎回来`);
+      // toast.success(`欢迎回来`);
       return;
     }
     (async () => {
