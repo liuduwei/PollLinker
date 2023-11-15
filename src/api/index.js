@@ -4,12 +4,14 @@ const client_secret = "a5bd128c703c6401c31a6605b3f48f9f";
 const client_id = "3828707668";
 const grant_type = "authorization_code";
 const URL = "http://sysu-psysv.cn/#/login";
-const redirect_uri_encode = encodeURI(URL);
+const redirect_uri_encode = encodeURIComponent(URL);
 // const redirect_uri = "http://yousan.xyz";
-const redirect_uri = URL;
+// const redirect_uri = URL;
 
 export const authUrl = `https://api.weibo.com/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri_encode}`;
 
+// console.log(encodeURIComponent(URL));
+// console.log(authUrl);
 // 登陆
 const login = (code) =>
   http.post("/api/auth", {
@@ -17,7 +19,7 @@ const login = (code) =>
     client_secret,
     client_id,
     grant_type,
-    redirect_uri,
+    authUrl,
   });
 
 const logout = (token) =>
