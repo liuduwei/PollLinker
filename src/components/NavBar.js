@@ -1,12 +1,9 @@
-import avatar from "../assets/avatar.png";
 const NavBar = function ({ avatar1, isLogin }) {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="avatar">
-          <div className="w-10 rounded">
-            <img src={avatar} alt="avatar"></img>
-          </div>
+          <div className="w-10 rounded"></div>
         </div>
       </div>
       <div className="navbar-center">

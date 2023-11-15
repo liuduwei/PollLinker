@@ -14,21 +14,19 @@ const Footer = function (props) {
         <p>
           中山大学 @1992
           <br />
-          备案号：
+          备案号：鄂ICP备2023021023号-1
         </p>
       </aside>
       <nav>
         <header className="footer-title">联系我们：</header>
-        <div className="grid grid-flow-col gap-4">
-          <a className="cursor-pointer">
-            <AiOutlineWechat size={24}></AiOutlineWechat>
-          </a>
-          <a className="cursor-pointer">
-            <AiFillPhone size={24}></AiFillPhone>
-          </a>
-          <a className="cursor-pointer">
-            <SiSinaweibo size={24}></SiSinaweibo>
-          </a>
+        <div className="grid grid-flow-row gap-4">
+          <div>
+            <a target="_blank" href="https://sph.sysu.edu.cn/?page=4">
+              学院官网
+            </a>
+          </div>
+          <div>电话: 8620－87330678</div>
+          <div>邮箱: gwxyb@mail.sysu.edu.cn</div>
         </div>
       </nav>
     </footer>
