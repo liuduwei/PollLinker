@@ -18,9 +18,12 @@ const Hero = function ({ isLogin, authUrl, handleLogout }) {
       <div className={`hero-overlay ${styles.overShadow}`}></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">心理树洞</h1>
+          <h1 className="mb-5 text-4xl font-bold">心理树洞</h1>
           <p className="mb-5" style={{ textAlign: "start" }}>
-            <span style={{ marginBottom: "16px", display: "block" }}>
+            <span
+              className="text-center"
+              style={{ marginBottom: "16px", display: "block" }}
+            >
               我们诚邀您参加新浪微博用户调查
             </span>
           </p>
