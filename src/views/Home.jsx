@@ -7,6 +7,8 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 import _ from "../assets/utils";
 import Modal from "../components/Modal";
+import card1 from "../assets/card1.jpg";
+import card2 from "../assets/card2.jpg";
 const Home = function (props) {
   const pollData = [
     {
@@ -14,12 +16,14 @@ const Home = function (props) {
       description:
         "采用权威有效的情绪水平和心理状态测评工具，可帮助您深入了解自己最近的情绪波动。",
       url: "https://www.wjx.cn/vm/OFmwYD1.aspx?sojumpparm=",
+      img: card1,
     },
     {
-      title: "社会满意度调查",
+      title: "大五人格调查",
       description:
         "采用权威有效的BFI-44量表，可帮助您深入了解自己的人格特质。 <br/> 请您先完成新浪微博用户心理健康调查再参与本调查，谢谢!",
-      url: "https://www.wjx.cn/vm/YHy33D2.aspx?sojumpparm=",
+      url: "https://www.wjx.cn/vm/PphMJIk.aspx?sojumpparm=",
+      img: card2,
     },
   ];
   const [isLogin, setIsLogin] = useState(false);
@@ -101,6 +105,7 @@ const Home = function (props) {
               description={item.description}
               url={item.url}
               userId={userId || _.storage.get("uid", 86400)}
+              img={item.img}
             ></Card>
           ))}
         </div>
