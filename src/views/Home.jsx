@@ -60,7 +60,9 @@ const Home = function (props) {
     }
     (async () => {
       try {
-        if (usp.size === 0 && usp.get("code") === null) return;
+        console.log(usp.size, usp.get("code"));
+        console.log(location.pathname);
+        if (usp.get("code") == null) return;
         toast.loading("登陆中...");
         const authCode = usp.get("code");
         const { uid, access_token } = await api.login(authCode);

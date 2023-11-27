@@ -26,6 +26,14 @@ const routes = [
       title: "问卷调查App",
     },
   },
+  {
+    path: "*",
+    name: "NotFound",
+    component: Home,
+    meta: {
+      title: "问卷调查App",
+    },
+  },
 ];
 
 export default routes;
