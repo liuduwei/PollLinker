@@ -1,7 +1,5 @@
-import hero from "../assets/bg.jpg";
 import avatar from "../assets/logo.png";
 import { useEffect } from "react";
-import { SiSinaweibo } from "react-icons/si";
 import _ from "../assets/utils";
 import styles from "./styles.module.less";
 const Hero = function ({ isLogin, authUrl, handleLogout }) {
@@ -12,7 +10,8 @@ const Hero = function ({ isLogin, authUrl, handleLogout }) {
     <div
       className="hero h-screen relative"
       style={{
-        backgroundImage: `url(${hero})`,
+        backgroundImage:
+          "https://pic-resource-yousan.oss-cn-hangzhou.aliyuncs.com/bg.jpg",
       }}
     >
       <div className={`hero-overlay ${styles.overShadow}`}></div>
@@ -51,26 +50,9 @@ const Hero = function ({ isLogin, authUrl, handleLogout }) {
           )}
         </div>
         <div className="w-[calc(100vw-24px)] flex justify-between items-center absolute top-2">
-          {/* <div className="avatar "> */}
           <div className="w-64">
             <img src={avatar} alt="avatar"></img>
           </div>
-          {/* </div> */}
-          {/* <div className="flex items-center gap-4">
-            {isLogin ? (
-              <>
-                <p>你好，微博用户</p>
-                <button className="btn btn-primary" onClick={handleLogout}>
-                  登出
-                </button>
-              </>
-            ) : (
-              <a href={authUrl} className="btn btn-primary">
-                <SiSinaweibo size={"2rem"}></SiSinaweibo>
-                登陆
-              </a>
-            )}
-          </div> */}
         </div>
       </div>
     </div>

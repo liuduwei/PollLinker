@@ -1,7 +1,4 @@
 import avatar from "../assets/zsu.PNG";
-import { AiOutlineWechat } from "react-icons/ai";
-import { SiSinaweibo } from "react-icons/si";
-import { AiFillPhone } from "react-icons/ai";
 const Footer = function (props) {
   return (
     <footer className="footer sm:grid-flow-col p-10 bg-neutral text-neutral-content">
@@ -21,7 +18,11 @@ const Footer = function (props) {
         <header className="footer-title">联系我们：</header>
         <div className="grid grid-flow-row gap-4">
           <div>
-            <a target="_blank" href="https://sph.sysu.edu.cn/?page=4">
+            <a
+              target="_blank"
+              href="https://sph.sysu.edu.cn/?page=4"
+              rel="noreferrer"
+            >
               学院官网
             </a>
           </div>

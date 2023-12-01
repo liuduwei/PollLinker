@@ -7,7 +7,7 @@ const routes = [
     component: () => <Navigate to="/Home"></Navigate>,
     name: "root",
     meta: {
-      title: "问卷调查App",
+      title: "心理树洞App",
     },
   },
   {
@@ -15,7 +15,7 @@ const routes = [
     component: Home,
     name: "Home",
     meta: {
-      title: "问卷调查App",
+      title: "心理树洞App",
     },
   },
   {
@@ -23,7 +23,7 @@ const routes = [
     component: Home,
     name: "Home",
     meta: {
-      title: "问卷调查App",
+      title: "心理树洞App",
     },
   },
   {
@@ -31,7 +31,7 @@ const routes = [
     name: "NotFound",
     component: Home,
     meta: {
-      title: "问卷调查App",
+      title: "心理树洞App",
     },
   },
 ];

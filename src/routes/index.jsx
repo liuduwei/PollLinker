@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 const Element = function (props) {
   const { component: Component, meta } = props;
-  const { title = "知乎日报webApp" } = meta || {};
+  const { title = "心理树洞App" } = meta || {};
   document.title = title;
   const location = useLocation();
   const params = useParams();

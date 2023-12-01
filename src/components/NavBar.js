@@ -7,7 +7,7 @@ const NavBar = function ({ avatar1, isLogin }) {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-xl">问卷平台</a>
+        <a className="btn btn-ghost normal-case text-xl">心理树洞</a>
       </div>
       <div className="navbar-end">
         {isLogin ? (
