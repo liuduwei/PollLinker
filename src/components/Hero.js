@@ -11,7 +11,7 @@ const Hero = function ({ isLogin, authUrl, handleLogout }) {
       className="hero h-screen relative"
       style={{
         backgroundImage:
-          "https://pic-resource-yousan.oss-cn-hangzhou.aliyuncs.com/bg.jpg",
+          "url(https://pic-resource-yousan.oss-cn-hangzhou.aliyuncs.com/bg.jpg)",
       }}
     >
       <div className={`hero-overlay ${styles.overShadow}`}></div>
