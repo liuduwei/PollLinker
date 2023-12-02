@@ -25,6 +25,13 @@ const Home = function (props) {
       url: "https://www.wjx.cn/vm/PphMJIk.aspx?sojumpparm=",
       img: card2,
     },
+    {
+      title: "敌意恐惧情绪调查",
+      description:
+        "采用权威有效的SCL-90分量表，可帮助您深入了解自己最近的敌意恐惧情绪。 <br/> 请您先完成新浪微博用户心理健康调查再参与本调查，谢谢！",
+      url: "https://www.wjx.cn/vm/YusB2U9.aspx?sojumpparm=",
+      img: "https://pic-resource-yousan.oss-cn-hangzhou.aliyuncs.com/R-C.jpeg",
+    },
   ];
   const [isLogin, setIsLogin] = useState(false);
   const [userId, setUserId] = useState("");
