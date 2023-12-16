@@ -3,7 +3,7 @@ import http from "./http";
 const client_secret = "a5bd128c703c6401c31a6605b3f48f9f";
 const client_id = "3828707668";
 const grant_type = "authorization_code";
-const URL = "http://sysu-psysv.cn/#/login";
+const URL = "https://sysu-psysv.cn/#/login";
 const redirect_uri_encode = encodeURIComponent(URL);
 
 export const authUrl = `https://api.weibo.com/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri_encode}`;
