@@ -12,16 +12,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 // 创建一个 POST 路由以处理转发
 app.post("/api/auth", (req, res) => {
-  console.log("123");
   const { code, client_secret, client_id, grant_type, redirect_uri } = req.body;
-  console.log(
-    "code, client_secret, client_id, grant_type, redirect_uri ",
-    code,
-    client_secret,
-    client_id,
-    grant_type,
-    redirect_uri
-  );
   // 这是你想要转发到的目标服务器 URL
   const targetUrl = "https://api.weibo.com/oauth2/access_token";
 
@@ -44,7 +35,6 @@ app.post("/api/auth", (req, res) => {
     )
     .then((response) => {
       // 请求成功，返回目标服务器的响应
-      console.log(response);
       res.json(response.data);
     })
     .catch((error) => {
