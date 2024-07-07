@@ -7,6 +7,7 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 import _ from "../assets/utils";
 import Modal from "../components/Modal";
+import card from "../assets/card.png";
 import card1 from "../assets/card1.jpg";
 import card2 from "../assets/card2.jpg";
 const Home = function (props) {
@@ -23,7 +24,7 @@ const Home = function (props) {
       description:
         "采用权威有效的SCL-90分量表，可帮助您深入了解自己最近的敌意恐惧情绪。 <br/> 请您先完成新浪微博用户心理健康调查再参与本调查，谢谢！",
       url: "https://www.wjx.cn/vm/YusB2U9.aspx?sojumpparm=",
-      img: "https://pic-resource-yousan.oss-cn-hangzhou.aliyuncs.com/R-C.jpeg",
+      img: card,
     },
     {
       title: "大五人格调查",

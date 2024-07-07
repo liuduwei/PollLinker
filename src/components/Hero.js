@@ -2,6 +2,7 @@ import avatar from "../assets/logo.png";
 import { useEffect } from "react";
 import _ from "../assets/utils";
 import styles from "./styles.module.less";
+import BG from "../assets/bg.jpg";
 const Hero = function ({ isLogin, authUrl, handleLogout }) {
   useEffect(() => {
     _.scrollSmooth();
@@ -10,8 +11,7 @@ const Hero = function ({ isLogin, authUrl, handleLogout }) {
     <div
       className="hero h-screen relative"
       style={{
-        backgroundImage:
-          "url(https://pic-resource-yousan.oss-cn-hangzhou.aliyuncs.com/bg.jpg)",
+        backgroundImage: `url(${BG})`,
       }}
     >
       <div className={`hero-overlay ${styles.overShadow}`}></div>
